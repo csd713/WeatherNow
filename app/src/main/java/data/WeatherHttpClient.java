@@ -23,7 +23,7 @@ public class WeatherHttpClient {
         HttpURLConnection connection = null;
         InputStream inputStream = null;
         try {
-            connection = (HttpURLConnection) (new URL(Utils.BASE_URL + place)).openConnection();
+            connection = (HttpURLConnection) (new URL(Utils.BASE_URL + place + Utils.APP_ID)).openConnection();
             connection.setRequestMethod("GET");
             connection.setDoInput(true);
             connection.setDoOutput(true);
